@@ -12,9 +12,10 @@ Vue.use(VueGoogleMaps,{
 
   load:{
 
-    key:'AIzaSyDSowyaaXbGdklLn7WBlVDyMUTCc6SpuJ8'
+    key:'AIzaSyAf9mwc-FqKONtCae9zD4b4LTL1DmR0l-E'
+   
   },
-  installComponents:false
+ 
 })
 
 new Vue({
