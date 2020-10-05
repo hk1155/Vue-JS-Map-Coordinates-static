@@ -27,25 +27,27 @@ export default {
    
     data(){
         return {
+            platform:{},
+            map1:{},
+            api:"AIzaSyAf9mwc-FqKONtCae9zD4b4LTL1DmR0l-E",
             map: null,
             dclat:null,
             dclng:null,
 
             coordinates:{
-                //lat:0,
-                //lng:0
-                lat:null,
-                lng:null
+                lat:0,
+                lng:0
+                
             },
             cust:{
                 clat:null,
                 clng:null
             }
-            
-
         }
     },
     created(){
+
+        // this.platform=new H.service.platform({"apikey":this.api});
 
         this.$getLocation({})
         .then(coordinates =>{
@@ -53,20 +55,30 @@ export default {
             this.coordinates=coordinates;
         })
         .catch(error=>alert(error));
-        
-      
+              
     },methods:
     {
+
+       
         getData()
         {
             //alert('test');
             this.dclat=this.cust.clat
             this.dclng=this.cust.clng
-            this.lat=this.cust.clat
-            this.lng=this.cust.clng
+            // this.lat=this.cust.clat
+            // this.lng=this.cust.clng
             
         }
     },mounted(){
+
+        // this.map1=new H.map1{
+        //     this.$refs.map1,
+        //     this.platform.createDefaultLayers().vector.normal.map,
+        //     {
+        //         zoom:this.zoom,
+        //         center:{lat:coordinates.lat,lng:coordinates.lng}
+        //     }
+        // };
 
         this.$refs.mapRef.$mapPromise.then(map=>this.map=map);
     },
