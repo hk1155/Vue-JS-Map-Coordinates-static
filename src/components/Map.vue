@@ -27,9 +27,7 @@ export default {
    
     data(){
         return {
-            platform:{},
-            map1:{},
-            api:"AIzaSyAf9mwc-FqKONtCae9zD4b4LTL1DmR0l-E",
+            
             map: null,
             dclat:null,
             dclng:null,
