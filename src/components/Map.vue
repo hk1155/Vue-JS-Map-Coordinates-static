@@ -43,9 +43,7 @@ export default {
             }
         }
     },
-    created(){
-
-        // this.platform=new H.service.platform({"apikey":this.api});
+    created(){   
 
         this.$getLocation({})
         .then(coordinates =>{
@@ -55,9 +53,7 @@ export default {
         .catch(error=>alert(error));
               
     },methods:
-    {
-
-       
+    {      
         getData()
         {
             //alert('test');
